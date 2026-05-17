@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Codehead Systems — open source by Ned Wolpert</title>
+  <meta name="description" content="An open-source workshop of cryptography, authentication, and infrastructure libraries by engineer Ned Wolpert. Featuring pk-auth, the Hofmann Elimination (OPAQUE PAKE), and a collection of JVM utilities." />
+  <meta name="theme-color" content="#0B0B0D" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=JetBrains+Mono:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a href="#top" class="topbar__brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="mono-tiny">CODEHEAD&nbsp;&nbsp;SYSTEMS</span>
+    </a>
+    <nav class="topbar__nav" aria-label="primary">
+      <a href="#projects" class="mono-tiny">↓&nbsp;catalogue</a>
+      <a href="#contact" class="mono-tiny">↓&nbsp;contact</a>
+      <a href="https://github.com/codeheadsystems" class="mono-tiny">↗&nbsp;github</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ─────────── HERO ─────────── -->
+    <section class="hero">
+      <div class="hero__meta">
+        <span class="rule" aria-hidden="true"></span>
+        <span class="mono-tiny">CODEHEAD&nbsp;SINCE&nbsp;2005 · APACHE&nbsp;2.0&nbsp;/&nbsp;MIT</span>
+      </div>
+
+      <h1 class="hero__title">
+        <span class="hero__title-line">An open-source</span>
+        <span class="hero__title-line">workshop, <em>since 2005</em>.</span>
+      </h1>
+
+      <div class="hero__split">
+        <p class="hero__lead">
+          Run by <a href="https://github.com/wolpert">Ned Wolpert</a> — coding
+          since 1994, Codehead since 2005 (Amazon&nbsp;·&nbsp;Alexa, and points
+          before and after). Libraries I've reached for too many times to keep
+          rebuilding.
+        </p>
+
+        <aside class="hero__sidecar" aria-label="workshop facts">
+          <dl>
+            <div><dt>Curator</dt><dd>Ned Wolpert</dd></div>
+            <div><dt>Coding since</dt><dd>1994</dd></div>
+            <div><dt>Codehead since</dt><dd>2005</dd></div>
+            <div><dt>License</dt><dd>Apache 2.0 / MIT</dd></div>
+            <div><dt>Status</dt><dd><span class="status-dot" aria-hidden="true"></span>actively maintained</dd></div>
+          </dl>
+        </aside>
+      </div>
+
+      <div class="hero__cta">
+        <a href="#projects" class="btn btn--primary">enter the catalogue →</a>
+        <a href="#contact" class="btn btn--ghost">make contact</a>
+      </div>
+    </section>
+
+    <!-- ─────────── PROJECTS ─────────── -->
+    <section id="projects" class="projects">
+      <header class="section-head">
+        <span class="mono-tiny">§&nbsp;THE&nbsp;CATALOGUE</span>
+        <h2 class="section-head__title">Three corners of the workshop.</h2>
+        <p class="section-head__lede">
+          Three projects, each with its own discipline — passkeys, password-less
+          cryptography, and the small Java tools in between.
+        </p>
+      </header>
+
+      <!-- ─── 01 · pk-auth ─── -->
+      <article class="project">
+        <header class="project__rail">
+          <span class="mono-tiny">PROJECT</span>
+          <span class="project__num" aria-hidden="true">01</span>
+          <span class="mono-tiny project__rail-tag">A&nbsp;–&nbsp;AUTH</span>
+        </header>
+
+        <div class="project__body">
+          <div class="project__heading">
+            <h3 class="project__title">pk-auth</h3>
+            <span class="project__kicker mono-tiny">passkeys · jvm · webauthn</span>
+          </div>
+
+          <p class="project__lede">
+            A production-grade, <strong>passkeys-first</strong> authentication
+            template for the&nbsp;JVM.
+          </p>
+
+          <p class="project__text">
+            Ships as a reusable library set you can drop into a Spring Boot,
+            Dropwizard, or Micronaut application. The core is framework-neutral;
+            the host's user and credential storage is a plug-in SPI.
+          </p>
+
+          <ul class="chips">
+            <li>Java</li><li>Spring Boot</li><li>Dropwizard</li><li>Micronaut</li><li>WebAuthn / FIDO2</li>
+          </ul>
+
+          <div class="project__links">
+            <a class="link-arrow link-arrow--lead" href="https://codeheadsystems.github.io/pk-auth/">
+              <span>visit the project site</span><span class="link-arrow__icon">↗</span>
+            </a>
+            <a class="link-arrow" href="https://github.com/codeheadsystems/pk-auth">
+              <span>view source</span><span class="link-arrow__icon">↗</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ─── 02 · Hofmann Elimination ─── -->
+      <article class="project">
+        <header class="project__rail">
+          <span class="mono-tiny">PROJECT</span>
+          <span class="project__num" aria-hidden="true">02</span>
+          <span class="mono-tiny project__rail-tag">B&nbsp;–&nbsp;CRYPTO</span>
+        </header>
+
+        <div class="project__body">
+          <div class="project__heading">
+            <h3 class="project__title">
+              <span class="project__title-pre">the</span>
+              Hofmann Elimination
+            </h3>
+            <span class="project__kicker mono-tiny">opaque · oprf · elliptic curves</span>
+          </div>
+
+          <p class="project__lede">
+            OPAQUE&nbsp;PAKE — a server that <em>never</em> sees your password.
+          </p>
+
+          <p class="project__text">
+            An implementation of the OPAQUE password-authenticated key exchange,
+            written directly from its RFC specifications. Built on OPRF and
+            elliptic-curve cryptography. The server authenticates the client
+            without ever receiving — or being able to derive — the password.
+          </p>
+
+          <div class="rfc-block" role="list" aria-label="implemented RFCs">
+            <div role="listitem">
+              <span class="mono-tiny rfc-block__id">RFC&nbsp;9380</span>
+              <span class="rfc-block__name">Hash-to-Elliptic-Curve</span>
+            </div>
+            <div role="listitem">
+              <span class="mono-tiny rfc-block__id">RFC&nbsp;9497</span>
+              <span class="rfc-block__name">OPRF&nbsp;<span class="muted">(mode&nbsp;0)</span></span>
+            </div>
+            <div role="listitem">
+              <span class="mono-tiny rfc-block__id">RFC&nbsp;9807</span>
+              <span class="rfc-block__name">OPAQUE-3DH</span>
+            </div>
+          </div>
+
+          <p class="project__text">
+            Java implementation via Bouncy Castle, with a TypeScript client library
+            bundled. Rust, Go, and C# implementations are next, alongside a
+            cross-language test suite.
+          </p>
+
+          <ul class="chips">
+            <li>Java</li><li>TypeScript</li><li>Bouncy Castle</li><li>PAKE</li><li>Crypto Research</li>
+          </ul>
+
+          <div class="project__links">
+            <a class="link-arrow link-arrow--lead" href="https://codeheadsystems.github.io/hofmann-elimination/">
+              <span>visit the project site</span><span class="link-arrow__icon">↗</span>
+            </a>
+            <a class="link-arrow" href="https://github.com/codeheadsystems/hofmann-elimination">
+              <span>view source</span><span class="link-arrow__icon">↗</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ─── 03 · Libraries ─── -->
+      <article class="project">
+        <header class="project__rail">
+          <span class="mono-tiny">PROJECT</span>
+          <span class="project__num" aria-hidden="true">03</span>
+          <span class="mono-tiny project__rail-tag">C&nbsp;–&nbsp;UTILS</span>
+        </header>
+
+        <div class="project__body">
+          <div class="project__heading">
+            <h3 class="project__title">
+              <span class="project__title-pre">the</span>
+              Libraries
+            </h3>
+            <span class="project__kicker mono-tiny">java · utilities · testing</span>
+          </div>
+
+          <p class="project__lede">
+            Small, sharp Java libraries — the things I keep reaching&nbsp;for.
+          </p>
+
+          <p class="project__text">
+            A growing collection of well-scoped tools, extracted from real
+            services so they stay practical rather than aspirational.
+          </p>
+
+          <ol class="sub-list">
+            <li>
+              <div class="sub-list__row">
+                <span class="sub-list__name">Feature-Flag</span>
+                <a href="https://github.com/codeheadsystems/libraries/tree/main/feature-flag" class="sub-list__link mono-tiny">view&nbsp;→</a>
+              </div>
+              <p class="sub-list__note">Lightweight A/B testing &amp; feature toggles, inspired by an internal Alexa tool.</p>
+            </li>
+            <li>
+              <div class="sub-list__row">
+                <span class="sub-list__name">Codehead Test</span>
+                <a href="https://github.com/codeheadsystems/libraries/tree/main/codehead-test" class="sub-list__link mono-tiny">view&nbsp;→</a>
+              </div>
+              <p class="sub-list__note">Test utilities for Jupiter, Immutables, and Jackson. Small, easy to consume.</p>
+            </li>
+            <li>
+              <div class="sub-list__row">
+                <span class="sub-list__name">Database Test</span>
+                <a href="https://github.com/codeheadsystems/libraries/tree/main/database-test" class="sub-list__link mono-tiny">view&nbsp;→</a>
+              </div>
+              <p class="sub-list__note">Test helpers for Cassandra and unique-string generation.</p>
+            </li>
+            <li>
+              <div class="sub-list__row">
+                <span class="sub-list__name">Metrics</span>
+                <a href="https://github.com/codeheadsystems/libraries/tree/main/metrics" class="sub-list__link mono-tiny">view&nbsp;→</a>
+              </div>
+              <p class="sub-list__note">Dropwizard / Micrometer integration with Dagger support and unit-test helpers.</p>
+            </li>
+            <li>
+              <div class="sub-list__row">
+                <span class="sub-list__name">OOP Mock</span>
+                <a href="https://github.com/codeheadsystems/libraries/tree/main/oop-mock" class="sub-list__link mono-tiny">view&nbsp;→</a>
+              </div>
+              <p class="sub-list__note">Out-of-process mocking for functional tests — a spiritual successor to Amazon's Chameleon.</p>
+            </li>
+            <li>
+              <div class="sub-list__row">
+                <span class="sub-list__name">State Machine Redux</span>
+                <a href="https://github.com/codeheadsystems/libraries/tree/main/smr" class="sub-list__link mono-tiny">view&nbsp;→</a>
+              </div>
+              <p class="sub-list__note">A KISS state machine. Import/export, games and services. The simpler successor.</p>
+            </li>
+            <li>
+              <div class="sub-list__row">
+                <span class="sub-list__name">Local Queue</span>
+                <a href="https://github.com/codeheadsystems/libraries/tree/main/local-queue" class="sub-list__link mono-tiny">view&nbsp;→</a>
+              </div>
+              <p class="sub-list__note">In-process queueing primitives.</p>
+            </li>
+          </ol>
+
+          <div class="project__links">
+            <a class="link-arrow link-arrow--lead" href="https://github.com/codeheadsystems/libraries/">
+              <span>view the libraries repo</span><span class="link-arrow__icon">↗</span>
+            </a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ─────────── PULL QUOTE ─────────── -->
+    <section class="pull">
+      <span class="mono-tiny pull__mark">¶</span>
+      <p class="pull__text">
+        These libraries started life inside of other service,
+        then got cleaned up enough to live on its own.
+      </p>
+    </section>
+
+    <!-- ─────────── CONTACT ─────────── -->
+    <section id="contact" class="contact">
+      <header class="section-head">
+        <span class="mono-tiny">§&nbsp;MAKE&nbsp;CONTACT</span>
+        <h2 class="section-head__title">Find Ned in the wild.</h2>
+      </header>
+
+      <ul class="contact__grid">
+        <li>
+          <span class="mono-tiny">Mastodon</span>
+          <a rel="me" href="https://hachyderm.io/@CodeHead">@CodeHead<span class="muted">@hachyderm.io</span></a>
+        </li>
+        <li>
+          <span class="mono-tiny">GitHub</span>
+          <a href="https://github.com/wolpert">github.com/<span class="muted">wolpert</span></a>
+        </li>
+        <li>
+          <span class="mono-tiny">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/wolpert">linkedin.com/in/<span class="muted">wolpert</span></a>
+        </li>
+        <li>
+          <span class="mono-tiny">Email</span>
+          <a href="mailto:ned.wolpert@gmail.com">ned.wolpert<span class="muted">@gmail.com</span></a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__col">
+      <span class="mono-tiny">Colophon</span>
+      <p>Set in <em>Fraunces</em> &amp; JetBrains&nbsp;Mono. Hand-written HTML and CSS. No frameworks, no trackers, no analytics.</p>
+    </div>
+    <div class="footer__col">
+      <span class="mono-tiny">License</span>
+      <p>All projects released under Apache&nbsp;2.0 or MIT.</p>
+    </div>
+    <div class="footer__col">
+      <span class="mono-tiny">©&nbsp;2005&nbsp;–&nbsp;present</span>
+      <p>Codehead Systems · Ned Wolpert.</p>
+    </div>
+  </footer>
+</body>
+</html>
