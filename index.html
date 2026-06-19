@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Codehead Systems — open source by Ned Wolpert</title>
-  <meta name="description" content="An open-source workshop of cryptography, authentication, and infrastructure libraries by engineer Ned Wolpert. Featuring pk-auth, the Hofmann Elimination (OPAQUE PAKE), and a collection of JVM utilities." />
+  <meta name="description" content="An open-source workshop of cryptography, authentication, and infrastructure libraries by engineer Ned Wolpert. Featuring pk-auth, mini-auth (a teachable identity suite), the Hofmann Elimination (OPAQUE PAKE), and a collection of JVM utilities." />
   <meta name="theme-color" content="#0B0B0D" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -46,15 +46,13 @@
       <div class="hero__split">
         <p class="hero__lead">
           Run by <a href="https://github.com/wolpert">Ned Wolpert</a> — coding
-          since 1994, Codehead since 2005 (Amazon&nbsp;·&nbsp;Alexa, and points
-          before and after). Libraries I've reached for too many times to keep
-          rebuilding.
+          since 1981, coding for businesses since 1994. Open-source since 1998,
+	  and Codehead Systems since 2005.
         </p>
 
         <aside class="hero__sidecar" aria-label="workshop facts">
           <dl>
             <div><dt>Curator</dt><dd>Ned Wolpert</dd></div>
-            <div><dt>Coding since</dt><dd>1994</dd></div>
             <div><dt>Codehead since</dt><dd>2005</dd></div>
             <div><dt>License</dt><dd>Apache 2.0 / MIT</dd></div>
             <div><dt>Status</dt><dd><span class="status-dot" aria-hidden="true"></span>actively maintained</dd></div>
@@ -72,10 +70,11 @@
     <section id="projects" class="projects">
       <header class="section-head">
         <span class="mono-tiny">§&nbsp;THE&nbsp;CATALOGUE</span>
-        <h2 class="section-head__title">Three corners of the workshop.</h2>
+        <h2 class="section-head__title">Four corners of the workshop.</h2>
         <p class="section-head__lede">
-          Three projects, each with its own discipline — passkeys, password-less
-          cryptography, and the small Java tools in between.
+          The most recent four projects, each with its own discipline — passkeys, password-less
+          cryptography, a teachable identity suite, and the small Java tools
+          in between.
         </p>
       </header>
 
@@ -183,12 +182,119 @@
         </div>
       </article>
 
-      <!-- ─── 03 · Libraries ─── -->
+      <!-- ─── 03 · mini-auth ─── -->
       <article class="project">
         <header class="project__rail">
           <span class="mono-tiny">PROJECT</span>
           <span class="project__num" aria-hidden="true">03</span>
-          <span class="mono-tiny project__rail-tag">C&nbsp;–&nbsp;UTILS</span>
+          <span class="mono-tiny project__rail-tag">C&nbsp;–&nbsp;IDENTITY</span>
+        </header>
+
+        <div class="project__body">
+          <div class="project__heading">
+            <h3 class="project__title">mini-auth</h3>
+            <span class="project__kicker mono-tiny">oauth2 · oidc · passkeys</span>
+          </div>
+
+          <p class="project__lede">
+            A readable, <strong>educational</strong> family of auth &amp;
+            identity services.
+          </p>
+
+          <p class="project__text">
+            A monorepo of six small, deployable services and two shared
+            libraries — each one intentionally small enough to read
+            end-to-end. Real cryptography wired into a single token plane and
+            policy engine, runnable in a homelab.
+          </p>
+
+          <ol class="sub-list">
+            <li>
+              <div class="sub-list__row">
+                <span class="sub-list__name">mini-kms</span>
+                <a href="https://github.com/codeheadsystems/mini-auth/tree/main/services/mini-kms" class="sub-list__link mono-tiny">view&nbsp;→</a>
+              </div>
+              <p class="sub-list__note">Envelope-encryption key management.</p>
+            </li>
+            <li>
+              <div class="sub-list__row">
+                <span class="sub-list__name">mini-idp</span>
+                <a href="https://github.com/codeheadsystems/mini-auth/tree/main/services/mini-idp" class="sub-list__link mono-tiny">view&nbsp;→</a>
+              </div>
+              <p class="sub-list__note">Machine identity via OAuth2 client-credentials.</p>
+            </li>
+            <li>
+              <div class="sub-list__row">
+                <span class="sub-list__name">mini-oidc</span>
+                <a href="https://github.com/codeheadsystems/mini-auth/tree/main/services/mini-oidc" class="sub-list__link mono-tiny">view&nbsp;→</a>
+              </div>
+              <p class="sub-list__note">Human SSO &amp; OpenID Provider with passkey support.</p>
+            </li>
+            <li>
+              <div class="sub-list__row">
+                <span class="sub-list__name">mini-gateway</span>
+                <a href="https://github.com/codeheadsystems/mini-auth/tree/main/services/mini-gateway" class="sub-list__link mono-tiny">view&nbsp;→</a>
+              </div>
+              <p class="sub-list__note">Forward-auth gateway for reverse proxies.</p>
+            </li>
+            <li>
+              <div class="sub-list__row">
+                <span class="sub-list__name">mini-directory</span>
+                <a href="https://github.com/codeheadsystems/mini-auth/tree/main/services/mini-directory" class="sub-list__link mono-tiny">view&nbsp;→</a>
+              </div>
+              <p class="sub-list__note">Identity source of truth.</p>
+            </li>
+            <li>
+              <div class="sub-list__row">
+                <span class="sub-list__name">mini-ca</span>
+                <a href="https://github.com/codeheadsystems/mini-auth/tree/main/services/mini-ca" class="sub-list__link mono-tiny">view&nbsp;→</a>
+              </div>
+              <p class="sub-list__note">Internal CA for mTLS workload identity.</p>
+            </li>
+            <li>
+              <div class="sub-list__row">
+                <span class="sub-list__name">mini-token</span>
+                <a href="https://github.com/codeheadsystems/mini-auth/tree/main/libs/mini-token" class="sub-list__link mono-tiny">view&nbsp;→</a>
+              </div>
+              <p class="sub-list__note">Shared token plane &amp; JWKS management.</p>
+            </li>
+            <li>
+              <div class="sub-list__row">
+                <span class="sub-list__name">mini-policy</span>
+                <a href="https://github.com/codeheadsystems/mini-auth/tree/main/libs/mini-policy" class="sub-list__link mono-tiny">view&nbsp;→</a>
+              </div>
+              <p class="sub-list__note">Authorization decision engine.</p>
+            </li>
+          </ol>
+
+          <p class="project__text">
+            Built to teach: a concepts-first course, a code-first reading order,
+            and labs that build and verify tokens by hand. Uses vetted,
+            production-grade cryptographic constructions — though the project
+            itself is unaudited.
+          </p>
+
+          <ul class="chips">
+            <li>Java 21</li><li>OAuth 2.0</li><li>OpenID Connect</li><li>WebAuthn</li><li>mTLS</li><li>Ed25519</li><li>Argon2id</li>
+          </ul>
+
+          <div class="project__links">
+            <a class="link-arrow link-arrow--lead" href="https://codeheadsystems.github.io/mini-auth/">
+              <span>visit the project site</span><span class="link-arrow__icon">↗</span>
+            </a>
+            <a class="link-arrow" href="https://github.com/codeheadsystems/mini-auth">
+              <span>view source</span><span class="link-arrow__icon">↗</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ─── 04 · Libraries ─── -->
+      <article class="project">
+        <header class="project__rail">
+          <span class="mono-tiny">PROJECT</span>
+          <span class="project__num" aria-hidden="true">04</span>
+          <span class="mono-tiny project__rail-tag">D&nbsp;–&nbsp;UTILS</span>
         </header>
 
         <div class="project__body">
